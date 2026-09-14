@@ -30,10 +30,10 @@ Built as part of the ZeTheta Algorithms quantitative risk training project.
 - Regime classification is based on a simple median split of rolling volatility; a production version could use more robust regime-detection methods (e.g. HMMs)
 
 ## How to Run Locally
-\`\`\`bash
+```bash
 pip install -r requirements.txt
 streamlit run app.py
-\`\`\`
+```
 
 ## Author
 Vijeta Shrivastava
