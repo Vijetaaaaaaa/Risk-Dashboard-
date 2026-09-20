@@ -8,10 +8,13 @@ st.title("Vijeta's Quantitative Risk Dashboard")
 st.sidebar.header("⚙️ Settings")
 ticker_input = st.sidebar.text_input("Enter tickers (comma separated)", "AAPL,MSFT,SPY")
 tickers = [t.strip().upper() for t in ticker_input.split(",")]
+# Always include SPY as our market benchmark, even if not in the user's list
+benchmark = "SPY"
+download_tickers = list(set(tickers + [benchmark]))
 
 st.write("Fetching data for:", tickers)
 
-data = sf.download(tickers, period="2y")["Close"]
+data = sf.download(download_tickers, period="2y")["Close"]
 
 st.write("Here's a peek at the raw data:")
 st.dataframe(data.head())
