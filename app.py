@@ -158,3 +158,6 @@ st.dataframe(
 )
 
 st.caption("Ranked by Sharpe ratio (highest risk-adjusted return first). Remember: check the significance testing and regime breakdown above before trusting the Sharpe ratio alone!")
+missing = [t for t in tickers if data[t].isna().all()]
+if missing:
+    st.warning(f"⚠️ No data found for: {', '.join(missing)} — please check the ticker symbol(s).")
