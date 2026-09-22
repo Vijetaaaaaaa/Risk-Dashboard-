@@ -8,13 +8,15 @@ Built as part of the ZeTheta Algorithms quantitative risk training project.
 
 ## Features
 
-1. **Sharpe Ratio Calculation** — annualized risk-adjusted return per strategy
-2. **Sharpe Ratio Significance Testing** — bootstrap resampling (1,000 iterations) to build 95% confidence intervals, testing whether a strategy's edge is statistically real or just noise
-3. **Strategy Correlation Analysis** — pairwise correlation matrix + heatmap, for assessing diversification
-4. **Drawdown Analysis** — max drawdown and underwater equity curves per strategy
-5. **Regime Performance Attribution** — splits history into high/low volatility regimes (based on SPY's rolling 21-day volatility) and recalculates Sharpe ratios per regime
-6. **Capacity Estimation** — simplified daily capital capacity estimate based on average daily dollar volume and a 5% max market participation assumption
-7. **Strategy Selection Summary** — combines all metrics into one ranked table
+1. **Custom Strategy Input** — enter any tickers via the sidebar (comma separated); SPY is always included in the background as a market benchmark
+2. **Sharpe Ratio Calculation** — annualized risk-adjusted return per strategy
+3. **Sharpe Ratio Significance Testing** — bootstrap resampling (1,000 iterations) to build 95% confidence intervals, testing whether a strategy's edge is statistically real or just noise
+4. **Strategy Correlation Analysis** — pairwise correlation matrix + heatmap, for assessing diversification
+5. **Drawdown Analysis** — max drawdown and underwater equity curves per strategy
+6. **Regime Performance Attribution** — splits history into high/low volatility regimes (based on SPY's rolling 21-day volatility) and recalculates Sharpe ratios per regime
+7. **Capacity Estimation** — simplified daily capital capacity estimate based on average daily dollar volume and a 5% max market participation assumption
+8. **Strategy Selection Summary** — combines all metrics into one ranked table
+9. **Graceful error handling** — invalid or missing tickers show a clear warning instead of crashing the app
 
 ## Tech Stack
 - **Streamlit** — dashboard framework
